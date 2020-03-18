@@ -22,7 +22,7 @@ class HomePage extends React.Component {
     
     <Link to='/signup'>
       <button className='signUp'>sign up</button></Link>
-      <Link to='/userpage'>    
+      <Link to='/signin'>    
       <button className='signIn'>sign in</button></Link>
   </div>
   )}

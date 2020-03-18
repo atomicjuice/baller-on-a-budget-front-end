@@ -1,18 +1,12 @@
 import React from 'react';
-import '../css/SignUpForm.css' 
+import '../css/SignInForm.css' 
 
-
-
-
-
-const SignUpForm = ({handleChange, handleSubmit}) => {
-
-
+const SignInForm = ({handleChange, handleSubmit}) => {
   return (
     <div>
 
-      <h1>SIGN UP</h1>
-            <form onSubmit={handleSubmit} className='signUpForm'>
+      <h1>SIGN IN</h1>
+      <form onSubmit={handleSubmit} className='signInForm'>
         <label>Username:</label>
         <input onChange={handleChange} type="text" name="username" />
         <br/>
@@ -25,6 +19,4 @@ const SignUpForm = ({handleChange, handleSubmit}) => {
   );
 }
 
-export default SignUpForm;
-
-
+export default SignInForm;
