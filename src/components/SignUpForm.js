@@ -1,24 +1,19 @@
 import React from 'react';
-import '../css/SignUpForm.css' 
+import '../css/SignUpForm.css'
 
 
-
-
-
-const SignUpForm = ({handleChange, handleSubmit}) => {
-
-
+const SignUpForm = ({ handleChange, handleSubmit }) => {
   return (
     <div>
 
       <h1>SIGN UP</h1>
-            <form onSubmit={handleSubmit} className='signUpForm'>
+      <form onSubmit={handleSubmit} className='signUpForm'>
         <label>Username:</label>
         <input onChange={handleChange} type="text" name="username" />
-        <br/>
+        <br />
         <label>Password:</label>
         <input onChange={handleChange} type="text" name="password" />
-        <br/>
+        <br />
         <input type="submit" value="Submit" />
       </form>
     </div>

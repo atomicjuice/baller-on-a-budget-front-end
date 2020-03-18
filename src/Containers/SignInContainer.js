@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import SignInForm from '../components/SignInForm'
 
-export class SignInContainer extends Component {
 
+export class SignInContainer extends Component {
 
   state = {
     username: null,
-    password:null
+    password: null
   }
 
   handleChange = (e) => {
@@ -18,8 +18,18 @@ export class SignInContainer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    e.target.reset()
-    console.log(this.state)
+    const configObject = {
+      method:  "POST",
+      headers: {
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      },
+      body: JSON.stringify (this.state)      
+    }
+    fetch("http://localhost:3001/signin", configObject)
+    .then(resp => resp.json())
+    .then(json => console.log(json) )
+    e.target.reset() 
   }
 
   render() {

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Homepage from './components/HomePage'
 import {Route} from 'react-router-dom'
-import SignUpForm from './Containers/SignUpContainer'
-import SignInForm from './components/SignInForm';
+import SignInContainer from './Containers/SignInContainer';
+import SignUpContainer from './Containers/SignUpContainer';
 
 
 
@@ -16,8 +16,8 @@ export class App extends Component {
     return (
       <div className="App">
       <Route exact path="/" render={() => <Homepage/>}/>
-      <Route exact path="/signup" render={() => <SignUpForm/>} />
-      <Route exact path="/signin" render={() => <SignInForm/> } />
+      <Route exact path="/signup" render={() => <SignUpContainer/>} />
+      <Route exact path="/signin" render={() => <SignInContainer/>} />
     </div>
     );
   }

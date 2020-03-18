@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import SignUpForm from '../components/SignUpForm'
 
 
-export class SignUp extends Component {
+export class SignUpContainer extends Component {
 
   state = {
     username: null,
-    password:null
+    password: null
   }
 
   handleChange = (e) => {
@@ -31,4 +31,4 @@ export class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default SignUpContainer;
