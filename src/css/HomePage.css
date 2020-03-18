@@ -1,0 +1,41 @@
+/* .home{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color:blue;
+  min-height: 100vh;
+  max-width: 10vw;
+  padding-left: 60%;
+} */
+
+.title{
+  margin-top: 20vh;
+}
+
+.signIn{
+  /* position: fixed; */
+  margin-top: 15vh;
+  margin-left: 15vw;
+  padding: 35px;
+  border-radius:10px;
+}
+
+.signUp{
+  /* position: fixed; */
+  margin-top: 15vh;
+  padding: 35px;
+  border-radius:10px;
+}
+
+.signUp:focus {
+  /* border: none; */
+  outline: none;
+}
+
+.signIn:focus {
+  /* border: none; */
+  outline: none;
+}
+
+
+
