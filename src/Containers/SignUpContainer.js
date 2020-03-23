@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SignUpForm from '../components/SignUpForm'
+import UserMainPage from '../components/UserMainPage';
 
 
 export class SignUpContainer extends Component {
@@ -16,16 +17,31 @@ export class SignUpContainer extends Component {
     console.log(this.state)
   }
 
+  renderMainUserPage = () => {
+    this.props.navProps.history.push('/usermainpage')
+  }
+  
+
   handleSubmit = (e) => {
     e.preventDefault()
+    const configObject = {
+      method:  "POST",
+      headers: {
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      },
+      body: JSON.stringify (this.state)      
+    }
+    fetch("http://localhost:3001/signup", configObject)
+    .then(resp => resp.json())
+    .then(json => this.props.signUp(json.username), this.renderMainUserPage())
     e.target.reset()
-    console.log(this.state)
   }
 
   render() {
     return (
       <div>
-        <SignUpForm handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+        <SignUpForm signUp={this.props.signUp} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
       </div>
     );
   }

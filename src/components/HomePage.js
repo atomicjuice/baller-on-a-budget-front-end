@@ -16,6 +16,8 @@ class HomePage extends React.Component {
   on
   
   render(){
+    console.log(this.props.navProps);
+    
     return(
   <div className='home'>
     <h1 className='title'>Baller-on-a-Budget</h1>
