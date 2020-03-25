@@ -13,7 +13,7 @@ const SignInForm = ({ handleChange, handleSubmit }) => {
         <input onChange={handleChange} type="text" name="username" />
         <br />
         <label>Password:</label>
-        <input onChange={handleChange} type="text" name="password" />
+        <input onChange={handleChange} type="password" name="password" />
         <br />
         <input type="submit" value="Submit" />
       </form>

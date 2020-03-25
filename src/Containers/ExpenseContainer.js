@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import IncomeForm from '../components/IncomeForm';
-import {withRouter} from 'react-router-dom';
+import ExpenseForm from '../components/ExpenseForm';
+import { withRouter } from 'react-router-dom';
 
 
-export class IncomeContainer extends Component {
+export class ExpenseContainer extends Component {
 
   state = {
-    user_id:this.props.id,
+    user_id:null,
     name: null,
     amount: null,
     frequency: null
@@ -14,13 +14,14 @@ export class IncomeContainer extends Component {
 
   onChange = (e) => {
     this.setState({
+      user_id:this.props.id,
       [e.target.name]: e.target.value
     })
     console.log(this.state)
   }
 
-  renderIncomeForm = () => {
-    this.props.history.push('/income-form')
+  renderExpenseForm = () => {
+    this.props.history.push('/expense-form')
   }
 
   handleSubmit = (e) => {
@@ -33,20 +34,21 @@ export class IncomeContainer extends Component {
       },
       body: JSON.stringify(this.state)
     }
-    fetch("http://localhost:3001/income-form", configObject)
+    fetch("http://localhost:3001/expense-form", configObject)
     .then(resp => resp.json())
     .then(data => console.log(data))
     e.target.reset()
-    this.renderIncomeForm()
+    this.renderExpenseForm()
   }
+
 
   render() {
     return (
       <div>
-        <IncomeForm onChange={this.onChange} handleSubmit={this.handleSubmit}/>
+        <ExpenseForm onChange={this.onChange} handleSubmit={this.handleSubmit}/>        
       </div>
     );
   }
 }
 
-export default withRouter(IncomeContainer);
+export default withRouter(ExpenseContainer) ;

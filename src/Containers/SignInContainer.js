@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import SignInForm from '../components/SignInForm'
-import { withRouter, Redirect } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 
 export class SignInContainer extends Component {
 
-  // state = {
-  //   username: null,
-  //   password: null
-  // }
+  state = {
+    user_id: null,
+    password: null
+  }
 
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     })
-    // console.log(this.state)
+    console.log(this.state);
+    
   }
 
   renderMainUserPage = () => {
-    this.props.navProps.history.push('/usermainpage')
+    this.props.navProps.history.push('/user-main-page')
   }
-
 
 
   handleSubmit = (e) => {
@@ -36,7 +36,7 @@ export class SignInContainer extends Component {
     fetch("http://localhost:3001/signin", configObject)
       .then(resp => resp.json())
       .then(json =>
-        this.props.signIn(json.username),
+        this.props.signIn(json.username, json.id) & console.log(json),
         this.renderMainUserPage())
       }
 
@@ -44,7 +44,7 @@ export class SignInContainer extends Component {
     return (
       <div>
         <SignInForm signIn={this.props.signIn} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-        {console.log(this.props)}
+        
 
 
       </div>

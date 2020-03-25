@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import IncomeForm from '../components/IncomeForm';
+import IncomeFormLoggedIn from '../components/IncomeFormLoggedIn'
 import {withRouter} from 'react-router-dom';
 
 
-export class IncomeContainer extends Component {
+export class UserIncomeContainer extends Component {
 
   state = {
     user_id:this.props.id,
@@ -20,7 +20,7 @@ export class IncomeContainer extends Component {
   }
 
   renderIncomeForm = () => {
-    this.props.history.push('/income-form')
+    this.props.history.push('income-form-logged-in')
   }
 
   handleSubmit = (e) => {
@@ -43,10 +43,10 @@ export class IncomeContainer extends Component {
   render() {
     return (
       <div>
-        <IncomeForm onChange={this.onChange} handleSubmit={this.handleSubmit}/>
+        <IncomeFormLoggedIn onChange={this.onChange} handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
 }
 
-export default withRouter(IncomeContainer);
+export default withRouter(UserIncomeContainer);

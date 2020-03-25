@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import IncomeForm from '../components/IncomeForm';
+import ExpenseFormLoggedIn from '../components/ExpenseFormloggedIn'
 import {withRouter} from 'react-router-dom';
 
 
-export class IncomeContainer extends Component {
+export class UserExpenseContainer extends Component {
 
   state = {
     user_id:this.props.id,
@@ -19,8 +19,8 @@ export class IncomeContainer extends Component {
     console.log(this.state)
   }
 
-  renderIncomeForm = () => {
-    this.props.history.push('/income-form')
+  renderExpenseForm = () => {
+    this.props.history.push('expense-form-logged-in')
   }
 
   handleSubmit = (e) => {
@@ -33,20 +33,20 @@ export class IncomeContainer extends Component {
       },
       body: JSON.stringify(this.state)
     }
-    fetch("http://localhost:3001/income-form", configObject)
+    fetch("http://localhost:3001/expense-form", configObject)
     .then(resp => resp.json())
     .then(data => console.log(data))
     e.target.reset()
-    this.renderIncomeForm()
+    this.renderExpenseForm()
   }
 
   render() {
     return (
       <div>
-        <IncomeForm onChange={this.onChange} handleSubmit={this.handleSubmit}/>
+        <ExpenseFormLoggedIn onChange={this.onChange} handleSubmit={this.handleSubmit}/>
       </div>
     );
   }
 }
 
-export default withRouter(IncomeContainer);
+export default withRouter(UserExpenseContainer);
