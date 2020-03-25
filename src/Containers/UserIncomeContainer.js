@@ -35,9 +35,9 @@ export class UserIncomeContainer extends Component {
     }
     fetch("http://localhost:3001/income-form", configObject)
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(data => alert(`${data.name} saved`))
     e.target.reset()
-    this.renderIncomeForm()
+    // this.renderIncomeForm()
   }
 
   render() {

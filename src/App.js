@@ -11,6 +11,8 @@ import UserIncomeContainer from './Containers/UserIncomeContainer'
 import UserExpenseContainer from './Containers/UserExpenseContainer'
 import IncomeIndexContainer from './Containers/IncomeIndexContainer'
 import EditIncomeForm from './components/EditIncomeForm'
+import ExpenseIndexContainer from './Containers/ExpenseIndexContainer'
+import EditExpenseForm from './components/EditExpenseForm'
 
 export class App extends Component {
 
@@ -49,6 +51,8 @@ export class App extends Component {
       <Route exact path="/expense-form-logged-in" render={ () => <UserExpenseContainer id={this.state.user_id}/> } />
       <Route exact path="/all-income" render={ () => <IncomeIndexContainer id={this.state.user_id}/> } />
       <Route exact path="/income-form/:id" render={ () => <EditIncomeForm/> } />
+      <Route exact path="/all-expenses" render={ () => <ExpenseIndexContainer id={this.state.user_id}/>}/>
+      <Route exact path="/expense-form/:id" render={ () => <EditExpenseForm/> } />
     
       </BrowserRouter>
       

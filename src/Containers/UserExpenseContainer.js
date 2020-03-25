@@ -35,7 +35,7 @@ export class UserExpenseContainer extends Component {
     }
     fetch("http://localhost:3001/expense-form", configObject)
     .then(resp => resp.json())
-    .then(data => console.log(data))
+    .then(data => alert(`${data.name} saved`))
     e.target.reset()
     this.renderExpenseForm()
   }

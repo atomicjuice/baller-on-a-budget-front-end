@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-import IncomeIndex from '../components/IncomeIndex'
+import ExpenseIndex from '../components/ExpenseIndex'
 import {withRouter} from 'react-router-dom'
 
-const allIncome= "http://localhost:3001/all-income"
+const allExpenses= "http://localhost:3001/all-expenses"
 
 
-export class IncomeIndexContainer extends Component {
+export class ExpenseIndexContainer extends Component {
 
   state ={
     user_id: this.props.id,
-    incomeArray: [],
+    expenseArray: [],
     name: null,
     amount: null,
     frequency: null
   }
 
   componentDidMount(){
-    fetch(allIncome)
+    fetch(allExpenses)
     .then(resp => resp.json())
     .then(data => {
       this.setState({
-        incomeArray: data.all_income
+        expenseArray: data.all_expenses
       })
     })
   }
 
-
-  editIncome = (e) => {
+  editExpense = (e) => {
     const id=e.target.id
-    this.props.history.push('/income-form/'+ id)
+    this.props.history.push('/expense-form/'+ id)
   }
 
   destroy = (e) => {
@@ -39,15 +38,15 @@ export class IncomeIndexContainer extends Component {
         "Content-Type":"application/json",
         "Accept":"application/json"
       }}
-      fetch("http://localhost:3001/income-form/"+id, configObject)
+      fetch("http://localhost:3001/expense-form/"+id, configObject)
       .then(resp => resp.json())
       .then(data => {alert(data.message)
 
-      fetch(allIncome)
+      fetch(allExpenses)
       .then(resp => resp.json())
       .then(data => {
         this.setState({
-          incomeArray: data.all_income
+          expenseArray: data.all_expenses
         })
       })})
       
@@ -56,11 +55,11 @@ export class IncomeIndexContainer extends Component {
   render() {
     return (
       <div>
-        {this.state.incomeArray.map(income => <IncomeIndex key={income.id} income={income} edit={this.editIncome} destroy={this.destroy}/>)}
+        {this.state.expenseArray.map(expense => <ExpenseIndex key={expense.id} expense={expense} edit={this.editExpense} destroy={this.destroy}/>)}
         {console.log(this.state)}
       </div>
     );
   }
 }
 
-export default withRouter(IncomeIndexContainer);
+export default withRouter(ExpenseIndexContainer);

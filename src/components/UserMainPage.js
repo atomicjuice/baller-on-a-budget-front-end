@@ -8,7 +8,26 @@ import NavBar from './NavBar'
 export class UserMainPage extends Component {
 
   
-  renderWeeklyBudget= () => {
+  // renderWeeklyBudget= () => {
+  //   const configObject = {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type":"application/json",
+  //       "Accept":"application/json"
+  //     },
+  //     body: JSON.stringify(this.state)
+  //   } 
+  //   fetch(`http://localhost:3001/user-main-page`, configObject)
+  //   .then(resp => resp.json())
+  //   .then(data => this.setState(
+  //     {weekly_budget:data.weekly_budget,
+  //       income:data.weekly_income,
+  //       expense:data.weekly_expense
+  //     }))
+  //     // console.log(this.state)
+  // }
+
+  componentDidMount(){
     const configObject = {
       method: "POST",
       headers: {
@@ -26,11 +45,12 @@ export class UserMainPage extends Component {
       }))
       // console.log(this.state)
   }
+  
 
   state = {
     username: this.props.username,
     user_id: this.props.id,
-    weekly_budget: this.renderWeeklyBudget(),
+    weekly_budget: null,
     income: null,
     expense:null
   }

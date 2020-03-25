@@ -2,3 +2,12 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
 }
+
+.editButton{
+  justify-self: left;
+}
+
+.allExpenses{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
