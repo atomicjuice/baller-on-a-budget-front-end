@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import IncomeFormLoggedIn from '../components/IncomeFormLoggedIn'
 import {withRouter} from 'react-router-dom';
+import '../css/UserPage.css'
 
 
 export class UserIncomeContainer extends Component {
@@ -42,7 +43,7 @@ export class UserIncomeContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="editIncome">
         <IncomeFormLoggedIn onChange={this.onChange} handleSubmit={this.handleSubmit}/>
       </div>
     );

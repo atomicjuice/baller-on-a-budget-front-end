@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/IncomeExpenseIndex.css'
-import NavBar from './NavBar'
 
 
 const IncomeIndex = ({ income, edit, destroy}) => {
@@ -8,7 +7,7 @@ const IncomeIndex = ({ income, edit, destroy}) => {
     
     <div className="allIncome">
       
-      <div><button onClick={destroy} id={income.id}>delete</button></div>
+      
       
       <div>
         <h4>from {income.name}</h4>
@@ -17,9 +16,10 @@ const IncomeIndex = ({ income, edit, destroy}) => {
 
         <h4>on a {income.frequency} basis</h4>
 
-        -------------------------------------------------------
     </div>
-  <div className="editButton"><button onClick={edit} id={income.id}>edit</button></div>
+    <div className="incomeDeleteButton col-15"><button onClick={destroy} id={income.id}>delete</button></div>
+  <div className="incomeEditButton col-15"><button onClick={edit} id={income.id}>edit</button></div>
+  -----------------------------
     </div>
   );
 }

@@ -13,6 +13,22 @@
   }
 }
 
+.userEditIncome{
+  background-image: url(https://pixabay.com/get/54e6dc454850a414ead9817ac32e347f1022dfe05b547349742f79d6.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+ }
+
+.body {
+  background-image: url(http://getwallpapers.com/wallpaper/full/6/2/3/389089.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+ }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

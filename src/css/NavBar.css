@@ -1,0 +1,33 @@
+
+
+/* .bg-dark1 {
+  background-color: black;
+}
+
+.navbar {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+
+.navbar-expand-lg {
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+} */
+
+.logo{
+  margin-right: 20vw;
+}
+
+#navy{
+  background-color: rgba(0, -27, 0, 0.28);
+}

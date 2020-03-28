@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
+import '../css/UserPage.css'
+
 
 const expenseToEdit = "http://localhost:3001"
 
@@ -50,7 +52,7 @@ export class EditExpenseForm extends Component {
       }
 
     return (
-      <div>
+      <div className="userEditExpense">
         {console.log(this.state)}
       <h1>Edit Expense</h1>
       <form onSubmit={handleSubmit} className='incomeForm'>

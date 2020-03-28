@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SignUpForm from '../components/SignUpForm'
+import '../css/UserPage.css'
+
 
 
 export class SignUpContainer extends Component {
@@ -43,7 +45,7 @@ export class SignUpContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="signUpContainer">
         <SignUpForm signUp={this.props.signUp} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
       </div>
     );

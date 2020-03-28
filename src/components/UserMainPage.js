@@ -2,30 +2,11 @@ import React, { Component } from 'react';
 // import App from '../App'
 import '../css/UserPage.css'
 import {Link} from 'react-router-dom'
-import NavBar from './NavBar'
 
 
 export class UserMainPage extends Component {
 
   
-  // renderWeeklyBudget= () => {
-  //   const configObject = {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type":"application/json",
-  //       "Accept":"application/json"
-  //     },
-  //     body: JSON.stringify(this.state)
-  //   } 
-  //   fetch(`http://localhost:3001/user-main-page`, configObject)
-  //   .then(resp => resp.json())
-  //   .then(data => this.setState(
-  //     {weekly_budget:data.weekly_budget,
-  //       income:data.weekly_income,
-  //       expense:data.weekly_expense
-  //     }))
-  //     // console.log(this.state)
-  // }
 
   componentDidMount(){
     const configObject = {
@@ -58,11 +39,13 @@ export class UserMainPage extends Component {
   render() {
     return (
       
-      <div className="grid">
+      <div className="grid body">
+        
         
         {console.log(this.state)}
         <div className="expense">
-          expenses breakdown:
+          <h4>Expenses Breakdown:</h4>
+          
           <br/>
           <br/>
           {/* Expense per week £{this.state.expense} */}
@@ -72,8 +55,17 @@ export class UserMainPage extends Component {
         </div>
         <div className="budget">
 
-        {NavBar()}
+        <h4>ok alex</h4>
         
+        <br/>
+        <h4>here is your weekly budget.</h4>
+        
+        <br/>
+        <br/>
+        <h4>£{this.state.weekly_budget}</h4>
+        
+        <br/>
+
 
           <Link to="/expense-form-logged-in">
           <button className="expenseButton">add expense</button>
@@ -83,17 +75,11 @@ export class UserMainPage extends Component {
           </Link>
           
           
-          <br/>
-        ok alex
-        <br/>
-        here is your weekly budget.
-        <br/>
-        <br/>
-        £{this.state.weekly_budget}
+          
+        
         </div>
         <div className="income">
-          income breakdown:
-          
+        <h4>Income Breakdown:</h4>          
           <br/>
           <br/>
           {/* Income per week is £{this.state.income} */}

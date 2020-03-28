@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import IncomeIndex from '../components/IncomeIndex'
 import {withRouter} from 'react-router-dom'
+import '../css/UserPage.css'
+
 
 const allIncome= "http://localhost:3001/all-income"
 
@@ -55,7 +57,7 @@ export class IncomeIndexContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="incomeIndex">
         {this.state.incomeArray.map(income => <IncomeIndex key={income.id} income={income} edit={this.editIncome} destroy={this.destroy}/>)}
         {console.log(this.state)}
       </div>

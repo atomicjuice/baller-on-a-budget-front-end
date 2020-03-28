@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavBar from './components/NavBar'
 import './App.css';
 import HomePage from './components/HomePage'
 import { Route, BrowserRouter} from 'react-router-dom'
@@ -13,6 +14,7 @@ import IncomeIndexContainer from './Containers/IncomeIndexContainer'
 import EditIncomeForm from './components/EditIncomeForm'
 import ExpenseIndexContainer from './Containers/ExpenseIndexContainer'
 import EditExpenseForm from './components/EditExpenseForm'
+import {withRouter} from 'react-router-dom'
 
 export class App extends Component {
 
@@ -34,6 +36,8 @@ export class App extends Component {
     })
   } 
 
+
+
   render() {
     
     return (
@@ -41,6 +45,7 @@ export class App extends Component {
         {/* {this.state.username ? <h1>Hey,{this.state.username}</h1> : <h1>Hello stranger</h1>} */}
       
       <BrowserRouter>
+      <NavBar/>
       <Route exact path="/" render={() => <HomePage />}/>
       <Route exact path="/income-form" render={() => <IncomeContainer user={this.state.username} id={this.state.user_id} /> } />
       <Route exact path="/expense-form" render={() => <ExpenseContainer user={this.state.username} id={this.state.user_id}/> } />
@@ -50,7 +55,7 @@ export class App extends Component {
       <Route exact path="/income-form-logged-in" render={ () => <UserIncomeContainer id={this.state.user_id}/> } />
       <Route exact path="/expense-form-logged-in" render={ () => <UserExpenseContainer id={this.state.user_id}/> } />
       <Route exact path="/all-income" render={ () => <IncomeIndexContainer id={this.state.user_id}/> } />
-      <Route exact path="/income-form/:id" render={ () => <EditIncomeForm/> } />
+      <Route exact path="/income-form/:id" render={ () =><div className="userEditIncome"><EditIncomeForm/></div>  } />
       <Route exact path="/all-expenses" render={ () => <ExpenseIndexContainer id={this.state.user_id}/>}/>
       <Route exact path="/expense-form/:id" render={ () => <EditExpenseForm/> } />
     
@@ -61,5 +66,5 @@ export class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
 

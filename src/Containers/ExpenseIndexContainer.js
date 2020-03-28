@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ExpenseIndex from '../components/ExpenseIndex'
 import {withRouter} from 'react-router-dom'
+import '../css/UserPage.css'
+
 
 const allExpenses= "http://localhost:3001/all-expenses"
 
@@ -54,7 +56,7 @@ export class ExpenseIndexContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="expensesIndex">
         {this.state.expenseArray.map(expense => <ExpenseIndex key={expense.id} expense={expense} edit={this.editExpense} destroy={this.destroy}/>)}
         {console.log(this.state)}
       </div>

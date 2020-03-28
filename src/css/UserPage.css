@@ -1,45 +1,148 @@
+/* .body {
+  background-image: url(http://getwallpapers.com/wallpaper/full/7/1/c/1146082-gold-coins-wallpaper-1920x1200-pc.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  height: 93.2vh;
+ } */
+ .body {
+  background-image: url(http://getwallpapers.com/wallpaper/full/6/2/3/389089.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+ }
+
+ .userEditExpense{
+  background-image: url(https://pixabay.com/get/5ee7dc47435ab114f6dd8379c12b367b083edbed5653714b772878.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100vh;
+}
+
+
+
+  .expensesIndex{
+    
+    background-image: url(https://pixabay.com/get/57e7d7454c53a414f6d1867dda2932791139dde4564c704c7d2a78d0954cc65f_1920.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    
+  }
+
+  .incomeIndex{
+    background-image: url(https://www.thesun.co.uk/wp-content/uploads/2020/01/NINTCHDBPICT000554828281.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    /* background-position: fixed;  */
+    
+  }
+
+  .signUpContainer{
+    background-image: url(https://pixabay.com/get/57e0d4464b50a914ead9817ac32e347f1022dfe05b547349742d7ad4.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+  }
+
+  .signInContainer{
+    background-image: url(https://pixabay.com/get/57e0d4464b50a914ead9817ac32e347f1022dfe05b547349742d7ad4.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+  }
+  
+
+  .editExpense{
+    background-image: url(https://pixabay.com/get/5ee7dc47435ab114f6dd8379c12b367b083edbed5653714b772878.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+  }
+
+  .editIncome{
+    background-image: url(https://pixabay.com/get/54e6dc454850a414ead9817ac32e347f1022dfe05b547349742f79d6.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+  }
+
 .budget{
   color: blue;
-  padding-right: 0%;
+  padding-top: 10vh;
   /* margin-top: 20vh; */
 }
 
 .income{
   color: green;
   justify-self: left;
-  margin-top: 6vh
+  /* margin-top: 6vh */
+  padding-top: 7vh;
 }
 
 .expense{
   color: red;
   justify-self: right;
-  margin-top: 6vh
+  /* margin-top: 6vh */
+  padding-top: 7vh;
 }
 
 .grid{
   display: grid;
   grid-template-columns: repeat(3, auto);
-  margin-top: 6vh;
+  /* margin-top: 6vh; */
 }
 
 .incomeButton{
-  color: green;
+  /* color: green;
   margin-bottom: 40px;
 
   margin-top: 15vh;
   margin-left: 3vw;
   margin-right: 3vw;
-  padding: 35px;
-  border-radius:10px;
+  border-radius:10px; */
+
+  /* position:fixed; */
+  
+  width: 130px;
+  height: 45px;
+	bottom:40px;
+	right:655px;
+	background-color:#00cc99a6;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
+
+  
 }
 
 .expenseButton{
-  color: red;
+  /* color: red;
   margin-bottom: 40px;
 
-  margin-top: 15vh;
+  
   margin-right: 3vw;
   margin-left: 3vw;
   padding: 35px;
-  border-radius:10px;
+  border-radius:10px; */
+
+  margin-top: 15vh;
+  width: 130px;
+  height: 45px;
+	bottom:40px;
+	right:655px;
+	background-color:#cc670082;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  box-shadow: 2px 2px 3px #999;
 }

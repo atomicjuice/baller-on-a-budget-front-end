@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SignInForm from '../components/SignInForm'
 import {withRouter} from 'react-router-dom';
+import '../css/UserPage.css'
 
 
 export class SignInContainer extends Component {
@@ -42,7 +43,7 @@ export class SignInContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="signInContainer">
         <SignInForm signIn={this.props.signIn} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
         
 

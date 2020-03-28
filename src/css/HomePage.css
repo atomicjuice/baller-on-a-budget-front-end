@@ -1,3 +1,8 @@
+/* .body {
+  background-image: url(https://i.ytimg.com/vi/-MKapbz0GIo/maxresdefault.jpg);
+  background-color: #cccccc;
+ } */
+
 /* .home{
   display:flex;
   flex-direction: column;
@@ -8,23 +13,35 @@
   padding-left: 60%;
 } */
 
+.background{
+    background-image: url(https://pixabay.com/get/57e0d4464b50a914f6d1867dda2932791139dde4564c704c7d2a78d09644c55e_1920.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+}
+
 .title{
-  margin-top: 20vh;
+  padding-top: 15vh
 }
 
 .signIn{
   /* position: fixed; */
-  margin-top: 15vh;
+  margin-top: 30vh;
   margin-left: 15vw;
   padding: 35px;
-  border-radius:10px;
+  border-radius:50px;
+  background-color:#00cc9945;
+
 }
 
 .signUp{
   /* position: fixed; */
   margin-top: 15vh;
   padding: 35px;
-  border-radius:10px;
+  border-radius:50px;
+  background-color:#00cc9945;
+
 }
 
 .signUp:focus {

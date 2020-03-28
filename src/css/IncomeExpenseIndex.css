@@ -1,13 +1,17 @@
-.allIncome{
+/* .allIncome{
   display: grid;
   grid-template-columns: repeat(3, auto);
-}
+} */
 
-.editButton{
+/* .expenseEditButton{
   justify-self: left;
-}
+} */
 
-.allExpenses{
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-}
+/* .expenseDeleteButton{
+  justify-self: right;
+} */
+
+/* .allExpenses{
+  display: grid; 
+   grid-template-columns: repeat(3, auto);
+} */

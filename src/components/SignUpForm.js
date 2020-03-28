@@ -8,11 +8,11 @@ const SignUpForm = ({ handleChange, handleSubmit }) => {
 
       <h1>SIGN UP</h1>
       <form onSubmit={handleSubmit} className='signUpForm'>
-        <label>Username:</label>
-        <input onChange={handleChange} type="text" name="username" />
+        
+        <input onChange={handleChange} type="text" name="username" placeholder="username"/>
         <br />
-        <label>Password:</label>
-        <input onChange={handleChange} type="text" name="password" />
+        
+        <input onChange={handleChange} type="text" name="password" placeholder="password"/>
         <br />
         <input type="submit" value="Submit" />
       </form>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ExpenseFormLoggedIn from '../components/ExpenseFormloggedIn'
 import {withRouter} from 'react-router-dom';
+import '../css/UserPage.css'
+
 
 
 export class UserExpenseContainer extends Component {
@@ -42,7 +44,7 @@ export class UserExpenseContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="editExpense">
         <ExpenseFormLoggedIn onChange={this.onChange} handleSubmit={this.handleSubmit}/>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
+import '../css/UserPage.css'
 
 
 
@@ -70,7 +71,7 @@ export class EditIncomeForm extends Component {
     }
 
     return (
-      <div>
+      <div >
         {console.log(this.props.location.pathname)}
       <h1>Edit Income</h1>
       <form onSubmit={handleSubmit} className='incomeForm'>

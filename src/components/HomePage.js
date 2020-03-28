@@ -19,8 +19,8 @@ class HomePage extends React.Component {
     console.log(this.props.navProps);
     
     return(
-  <div className='home'>
-    <h1 className='title'>Baller-on-a-Budget</h1>
+  <div className="background">
+    {/* <h1 className='title'>Baller-on-a-Budget</h1> */}
     
     <Link to='/signup'>
       <button className='signUp'>sign up</button></Link>
